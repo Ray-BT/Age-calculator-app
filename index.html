@@ -5,15 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="imagens/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Age calculator</title>
 </head>
 <body>
     <main>
         <section>
             <form action="">
-                <input type="number" name="numero" id="inumero">
+            <div id="formulario">
+                <div class="inputs-wrapper">
+                    <div class="input-container">
+                        <label for="idia">DAY</label>
+                        <input type="number" name="numero" id="idia">
+                    </div>
+                    <div class="input-container">
+                        <label for="imes">MONTH</label>
+                        <input type="number" name="numero" id="imes">
+                    </div>
+                    <div class="input-container">
+                        <label for="iano">YEAR</label>
+                        <input type="number" name="numero" id="iano">
+                    </div>
+                </div>
+                <span class="material-symbols-outlined">
+                    arrow_downward
+                    </span>
             </form>
+
+            <div id="res">
+
+            </div>
         </section>
     </main>
+
+    <script src="script/script.js"></script>
 </body>
 </html>
