@@ -27,17 +27,14 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 500px;
-    width: 350px;
+    height: 450px;
+    width: 500px;
     border-radius: 10px 10px 100px 10px;
     background-color: white;
     transform: translate(-50%, -50%);
 }
 
-div#divp {
-    display: grid;
-    justify-content: space-evenly;
-}
+
 
 div#formulario {
     display: flex;
@@ -45,28 +42,53 @@ div#formulario {
     align-items: center;
 }
 
-div#input-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+div.input-container {
+   
+}
+
+#idia , #imes , #iano {
+    width: 80px;
+    height: 40px;
+    margin: 10px 20px 20px 30px;
+    font-size: 1em;
+    font-weight: 700;
+    
+    justify-content: start;
+}
+
+
+
+label {
+    margin: 10px 20px 20px 30px;
+    color: rgb(117, 117, 117);
+    font-weight: 700;
+    
 }
 
 .inputs-wrapper {
     display: flex;
-    justify-content: center;
-    padding: 10px;
-    
+    justify-content: start;
+    width: 100%;
+    padding: 30px;
+    height: 100px;
 }
-input {
-    width: 113px;
-    
-    border-radius: 10px;
-    
-}
+
 
 span.material-symbols-outlined {
     font-size: 50px;
     background-color: hsl(259, 100%, 65%);
     color: white;
     border-radius: 50%;
+}
+
+button {
+    border-style: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+div#res {
+    background-color: green;
+    height: 30px;
+    width: 30px;
 }
