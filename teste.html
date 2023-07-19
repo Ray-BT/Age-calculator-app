@@ -6,22 +6,36 @@
   <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Arquivo CSS para estilização -->
 </head>
 <body>
-  <div class="conteudo">
-    <h2>Título do Conteúdo</h2>
-    <p>Este é um conteúdo que pode ser expandido ou contraído.</p>
-  </div>
+  <h1>Calculadora de Idade</h1>
+  <label for="dataNascimento">Insira sua data de nascimento:</label>
+  <input type="date" id="dataNascimento">
+
+  <button onclick="calcularIdade()">Calcular Idade</button>
+
+  <div id="resultado"></div>
   
-  <!-- Botão com o ícone -->
-  <button class="icone-botao" onclick="toggleContent()">
-    <i class="fas fa-chevron-down"></i>
-  </button>
+
+  
 
   <!-- JavaScript para controlar a expansão/contração do conteúdo -->
   <script>
-    function toggleContent() {
-      const conteudo = document.querySelector('.conteudo');
-      conteudo.classList.toggle('expandido');
-    }
+    function calcularIdade() {
+  var dataNascimento = document.getElementById('dataNascimento').value; // Obtém a data de nascimento do input
+  var dataAtual = new Date(); // Obtém a data atual
+
+  var nascimento = new Date(dataNascimento); // Cria um objeto Date com a data de nascimento
+  var diferenca = dataAtual - nascimento; // Calcula a diferença em milissegundos
+
+  var idade = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 365.25)); // Calcula a idade em anos
+
+  // Calcula a diferença em meses e dias
+  var meses = Math.floor((diferenca % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * (365.25 / 12)));
+  var dias = Math.floor((diferenca % (1000 * 60 * 60 * 24 * (365.25 / 12))) / (1000 * 60 * 60 * 24));
+
+  var resultado = "Sua idade é: " + idade + " anos, " + meses + " meses e " + dias + " dias.";
+
+  document.getElementById('resultado').innerHTML = resultado; // Exibe o resultado na página
+}
   </script>
 </body>
 </html>
