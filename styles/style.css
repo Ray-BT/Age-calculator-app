@@ -88,7 +88,10 @@ button {
 }
 
 div#res {
-    background-color: green;
-    height: 30px;
-    width: 30px;
+    background-color: aqua;
+    color: black;
+    width: 300px;
+    font-size: 2.3em;
+    height: auto;
+    text-align: start;
 }
