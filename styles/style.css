@@ -95,3 +95,7 @@ div#res {
     height: auto;
     text-align: start;
 }
+
+#res.placeholder {
+    color: hsl(259, 100%, 65%);
+  }

@@ -1,13 +1,7 @@
-document.addEventListener("DOMContentLoaded", function () {
-  let res = document.querySelector('div#res');
-  res.innerHTML = `-- years<br>-- days<br>-- months`;
-});
-
 function calcularIdade() {
   let idia = document.getElementById("idia").value;
   let imes = document.getElementById("imes").value;
   let iano = document.getElementById("iano").value;
-  let res = document.querySelector('div#res');
   
   let dataAtual = new Date();
   let anoAtual = dataAtual.getFullYear();
@@ -20,6 +14,8 @@ function calcularIdade() {
   let dataNascimento = new Date(iano, imes - 1, idia);
   let idadeDias = Math.floor((dataAtual - dataNascimento) / (1000 * 60 * 60 * 24));
 
+  let res = document.getElementById("res")
   res.innerHTML = `${idadeAno} years<br>${idadeDias} days<br>${idadeMes} months`;
 }
+
   
