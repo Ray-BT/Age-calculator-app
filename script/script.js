@@ -13,9 +13,13 @@ function calcularIdade() {
   
   let dataNascimento = new Date(iano, imes - 1, idia);
   let idadeDias = Math.floor((dataAtual - dataNascimento) / (1000 * 60 * 60 * 24));
-
+  
   let res = document.getElementById("res")
-  res.innerHTML = `${idadeAno} years<br>${idadeDias} days<br>${idadeMes} months`;
+  res.innerHTML = `<span style= "color: hsl(259, 100%, 65%)">${idadeAno}</span>
+  <span style= "color: black">Years<span/><br>
+  <span style= "color: hsl(259, 100%, 65%)">${idadeMes}</span>
+  <span style= "color: black">Months</span><br>
+  <span style= "color: hsl(259, 100%, 65%)">${idadeDias}</span> days`;
 }
 
   
