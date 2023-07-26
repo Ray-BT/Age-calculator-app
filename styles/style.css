@@ -91,7 +91,7 @@ div#res {
     width: 400px;
     font-size: 2.3em;
     height: auto;
-    text-align: start;
+    text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
@@ -105,4 +105,5 @@ div#res {
         background-color: white;
         transform: translate(-50%, -50%);
     }
+
 }
