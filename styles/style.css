@@ -81,6 +81,10 @@ span.material-symbols-outlined {
     border-radius: 50%;
 }
 
+span.material-symbols-outlined:hover {
+    background-color: black;
+}
+
 button {
     border-style: none;
     background-color: white;
@@ -111,6 +115,22 @@ div#res {
         font-size: 2.3em;
         height: auto;
         text-align: start;
+    }
+
+    #idia , #imes , #iano {
+        width: 100px;
+        height: 40px;
+        margin: 10px 20px 20px 30px;
+        font-size: 1em;
+        font-weight: 700;
+        justify-content: start;
+    }
+
+    label {
+        margin: 10px 20px 20px 30px;
+        color: rgb(117, 117, 117);
+        font-weight: 700;
+        
     }
 
 }
