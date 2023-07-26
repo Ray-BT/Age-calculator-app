@@ -16,9 +16,13 @@ function calcularIdade() {
   
   let res = document.getElementById("res")
   res.innerHTML = `<span style= "color: hsl(259, 100%, 65%)">${idadeAno}</span>
+  
   <span style= "color: black">Years<span/><br>
+
   <span style= "color: hsl(259, 100%, 65%)">${idadeMes}</span>
+
   <span style= "color: black">Months</span><br>
+
   <span style= "color: hsl(259, 100%, 65%)">${idadeDias}</span> days`;
 }
 
