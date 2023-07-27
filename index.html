@@ -15,15 +15,18 @@
                 <div class="inputs-wrapper">
                     <div class="input-container">
                         <label for="idia">DAY</label><br>
-                        <input type="day" name="numero" id="idia" placeholder="DD" required min="1" max="31">
+                        <input type="day" name="numero" id="idia" class="required" placeholder="DD" required min="1" max="31">
+                        <span class="span-required">Most be a valid day</span>
                     </div>
                     <div class="input-container">
                         <label for="imes">MONTH</label><br>
-                        <input type="number" name="numero" id="imes" placeholder="MM" required min="1" max="12">
+                        <input type="number" name="numero" id="imes" class="required" placeholder="MM" required min="1" max="12">
+                        <span class="span-required">Most be a valid month</span>
                     </div>
                     <div class="input-container">
                         <label for="iano">YEAR</label><br>
-                        <input type="number" name="numero" id="iano" placeholder="YYYY" required min="1" max="2023">
+                        <input type="number" name="numero" id="iano" class="required" placeholder="YYYY" required min="1" max="2023">
+                        <span class="span-required">Most be in the past</span>
                     </div>
                 </div>
                 <button onclick="calcularIdade()">

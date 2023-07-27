@@ -73,6 +73,9 @@ label {
     height: 100px;
 }
 
+.span-required {
+    font-size: 0.8em;
+}
 
 span.material-symbols-outlined {
     font-size: 50px;

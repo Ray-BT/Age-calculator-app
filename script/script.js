@@ -1,7 +1,24 @@
+let idia = document.getElementById("idia").value;
+let imes = document.getElementById("imes").value;
+let iano = document.getElementById("iano").value;
+const requiredInput = document.querySelectorAll('.required')
+const requiredSpan  = document.querySelectorAll('.span-required')
+
+
+
+
+function setError(index) {
+  requiredInput[index].style.border = 'solid 2px #e63636'
+
+}
+
+function dayValidate() {
+  if (requiredInput[0].value.length > 31) {
+    setError(0)
+  }
+}
+
 function calcularIdade() {
-  let idia = document.getElementById("idia").value;
-  let imes = document.getElementById("imes").value;
-  let iano = document.getElementById("iano").value;
   
   let dataAtual = new Date();
   let anoAtual = dataAtual.getFullYear();
@@ -24,6 +41,7 @@ function calcularIdade() {
   <span style= "color: black">Months</span><br>
 
   <span style= "color: hsl(259, 100%, 65%)">${idadeDias}</span> days`;
+
 }
 
   
