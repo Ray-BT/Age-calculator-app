@@ -9,12 +9,20 @@ const requiredSpan  = document.querySelectorAll('.span-required')
 
 function setError(index) {
   requiredInput[index].style.border = 'solid 2px #e63636'
+  requiredSpan[index].style.display = 'block'
 
+}
+
+function removeError(index) {
+    requiredInput[index].style.border = ''
+    requiredSpan[index].style.display = none
 }
 
 function dayValidate() {
   if (requiredInput[0].value.length > 31) {
     setError(0)
+  } else {
+    removeError(0)
   }
 }
 

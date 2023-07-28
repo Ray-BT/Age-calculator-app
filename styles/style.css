@@ -50,7 +50,7 @@ div.input-container {
 #idia , #imes , #iano {
     width: 60px;
     height: 40px;
-    margin: 10px 20px 20px 10px;
+    margin: 0px 20px 0px 10px;
     font-size: 1em;
     font-weight: 700;
     justify-content: start;
@@ -74,7 +74,8 @@ label {
 }
 
 .span-required {
-    font-size: 0.8em;
+    font-size: 0.6em;
+    
 }
 
 span.material-symbols-outlined {
@@ -123,7 +124,7 @@ div#res {
     #idia , #imes , #iano {
         width: 100px;
         height: 40px;
-        margin: 10px 20px 20px 30px;
+        margin: 0px 20px 0px 30px;
         font-size: 1em;
         font-weight: 700;
         justify-content: start;
@@ -134,6 +135,11 @@ div#res {
         color: rgb(117, 117, 117);
         font-weight: 700;
         
+    }
+
+    .span-required {
+        font-size: 0.8em;
+        margin: 0px 0px 0px 30px;
     }
 
 }
