@@ -19,7 +19,7 @@ function removeError(index) {
 }
 
 function dayValidate() {
-  if (requiredInput[0].value.length > 31) {
+  if (requiredInput[0].value > 31 || '') {
     setError(0)
   } else {
     removeError(0)
