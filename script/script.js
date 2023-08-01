@@ -67,11 +67,17 @@ function calcularIdade() {
   // Converte a diferença em milissegundos para dias
   let idadeDias = Math.floor(diferencaEmMilissegundos / (1000 * 60 * 60 * 24));
 
-  // Calcula a quantidade de dias no mês atual
-  let diasNoMesAtual = new Date(anoAtual, mesAtual, 0).getDate();
-
   // Ajusta a contagem de dias para considerar apenas os dias após o último mês completo
-  idadeDias = diaAtual - idia + 1;
+  if (diaAtual < idia) {
+    idadeMes--; // Subtrai 1 mês, pois o mês atual ainda não foi completado
+    let diasNoUltimoMes = new Date(anoAtual, mesAtual - 1, 0).getDate();
+    idadeDias = diaAtual + (diasNoUltimoMes - idia) + 1;
+  } else {
+    idadeDias = diaAtual - idia + 1;
+  }
+
+  // Obtém o valor absoluto (positivo) de idadeDias
+  idadeDias = Math.abs(idadeDias);
 
   let res = document.getElementById("res");
   res.innerHTML = `<span style="color: hsl(259, 100%, 65%)">${idadeAno}</span>
@@ -84,4 +90,3 @@ function calcularIdade() {
 
   <span style="color: hsl(259, 100%, 65%)">${idadeDias}</span> days`;
 }
-  
